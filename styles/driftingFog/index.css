@@ -1,0 +1,58 @@
+#background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: #0a2b5a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+#background:before, #background:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat-x;
+}
+
+#background:before {
+  background-image: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png");
+  -webkit-animation: drift 60s linear 0s infinite;
+          animation: drift 60s linear 0s infinite;
+}
+
+#background:after {
+  background-image: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-2.png");
+  -webkit-animation: drift 25s linear 0s infinite;
+          animation: drift 25s linear 0s infinite;
+}
+
+@-webkit-keyframes drift {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(-200vw, 0, 0);
+            transform: translate3d(-200vw, 0, 0);
+  }
+}
+
+@keyframes drift {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(-200vw, 0, 0);
+            transform: translate3d(-200vw, 0, 0);
+  }
+}
+/*# sourceMappingURL=index.css.map */
