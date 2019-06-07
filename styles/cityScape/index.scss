@@ -7,6 +7,7 @@
   border-right: 5px solid rgba(140, 0, 144, $dist);
   border-top: 3px solid rgba(92, 0, 95, $dist);
   z-index: $dist;
+  filter: blur(1px);
 }
 
 html {
@@ -15,7 +16,7 @@ html {
 }
 
 #cityScape {
-  background: rgb(34, 0, 88);
+  background: radial-gradient(circle farthest-side at 92vw 9vh, rgb(62, 0, 121), rgb(34, 0, 88));
   position: absolute;
   top: 0;
   left: 0;
@@ -27,13 +28,13 @@ html {
   }
 
   #sun {
-    right: 25px;
-    top: 25px;
-    width: 200px;
-    height: 200px;
+    right: 3vw;
+    top: 3vh;
+    width: calc(5vw + 5vh);
+    height: calc(5vw + 5vh);
     border: 30px solid rgb(98, 0, 144);
     border-radius: 50%;
-    background:rgb(140, 0, 144);
+    background:rgb(159, 0, 165);
     
     &:after {
       content: '';
