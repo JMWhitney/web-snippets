@@ -1,3 +1,41 @@
+$window_row: rgba(21, 21, 21, 0.3);
+
+.windows {
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 27px);
+  overflow: hidden;
+}
+
+:before, :after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+
+.windows::before {
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: $window_row;
+  $windows: ();
+  @for $i from 1 through 25 {
+    $height: 12px * $i;
+    $windows: append($windows, 0 $height $window_row, comma);
+  }
+  box-shadow: $windows;
+}
+
+.windows::after {
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 3px;
+}
+
 @mixin building($height, $width, $pos, $dist) {
   height: $height;
   width: $width;
@@ -7,8 +45,8 @@
   border-right: 5px solid rgba(140, 0, 144, $dist);
   border-top: 3px solid rgba(92, 0, 95, $dist);
   z-index: $dist;
-  filter: blur(1px);
 }
+
 
 html {
   overflow: hidden;
@@ -16,7 +54,7 @@ html {
 }
 
 #cityScape {
-  background: radial-gradient(circle farthest-side at 92vw 9vh, rgb(62, 0, 121), rgb(34, 0, 88));
+  background: radial-gradient(circle farthest-side at 92vw 9vh, rgb(62, 0, 121), rgb(27, 1, 70));
   position: absolute;
   top: 0;
   left: 0;
