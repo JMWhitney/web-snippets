@@ -182,8 +182,8 @@ html {
 #foreground {
   width: 100vw;
   height: 100vh;
-  -webkit-perspective: 200px;
-          perspective: 200px;
+  -webkit-perspective: calc(20vh + 4vw);
+          perspective: calc(20vh + 4vw);
 }
 
 #foreground #grid {

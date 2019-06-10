@@ -1,0 +1,44 @@
+[class*='cube'] {
+  position: absolute;
+}
+
+body {
+  height: 100vh;
+  perspective: 50em;
+}
+
+
+.cube { 
+  font-size: 8vmin;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+  animation: animateCube 8s linear infinite;
+}
+
+$cube-edge: 8em;
+
+.cube_face {
+  margin: -.5*$cube-edge;
+  width: $cube-edge; 
+  height: $cube-edge;
+  box-shadow: 0 0 0 2px;
+
+  --i: 0;
+  transform: rotate3d(var(--i, 0), var(--j, 1), 0, calc(var(--m, 0) * 90deg)) translateZ(.5*$cube-edge);
+
+  &:nth-child(n + 5) { --i: 1; --j: 0 }
+  &:nth-child(2 /* 2 = 1 + 1 */) { --m:  1; background-image: url(https://ih0.redbubble.net/image.416023529.7213/flat,550x550,075,f.u2.jpg); background-size: 100% 100%; }
+  &:nth-child(3 /* 3 = 2 + 1 */) { --m:  2; }
+  &:nth-child(4 /* 4 = 3 + 1 */) { --m:  3; }
+  &:nth-child(5 /* 5 = 4 + 1 */) { --m:  1; }
+  &:nth-child(6 /* 6 = 5 + 1 */) { --m: -1; }
+}
+
+@keyframes animateCube {
+  0% { transform:  translateZ(0px) rotateY(0deg)  }
+  25% { transform: translateZ(0px) rotateY(90deg) }
+  50% { transform: translateZ(0px) rotateY(180deg) }
+  75% { transform: translateZ(0px) rotateY(270deg) }
+  100% { transform: translateZ(0px) rotateY(360deg)}
+}

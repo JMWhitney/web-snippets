@@ -1,0 +1,104 @@
+[class*='cube'] {
+  position: absolute;
+}
+
+body {
+  height: 100vh;
+  -webkit-perspective: 50em;
+          perspective: 50em;
+}
+
+.cube {
+  font-size: 8vmin;
+  top: 50%;
+  left: 50%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: animateCube 8s linear infinite;
+          animation: animateCube 8s linear infinite;
+}
+
+.cube_face {
+  margin: -4em;
+  width: 8em;
+  height: 8em;
+  -webkit-box-shadow: 0 0 0 2px;
+          box-shadow: 0 0 0 2px;
+  --i: 0;
+  -webkit-transform: rotate3d(var(--i, 0), var(--j, 1), 0, calc(var(--m, 0) * 90deg)) translateZ(4em);
+          transform: rotate3d(var(--i, 0), var(--j, 1), 0, calc(var(--m, 0) * 90deg)) translateZ(4em);
+}
+
+.cube_face:nth-child(n + 5) {
+  --i: 1;
+  --j: 0 ;
+}
+
+.cube_face:nth-child(2) {
+  --m:  1;
+  background-image: url(https://ih0.redbubble.net/image.416023529.7213/flat,550x550,075,f.u2.jpg);
+  background-size: 100% 100%;
+}
+
+.cube_face:nth-child(3) {
+  --m:  2;
+}
+
+.cube_face:nth-child(4) {
+  --m:  3;
+}
+
+.cube_face:nth-child(5) {
+  --m:  1;
+}
+
+.cube_face:nth-child(6) {
+  --m: -1;
+}
+
+@-webkit-keyframes animateCube {
+  0% {
+    -webkit-transform: translateZ(0px) rotateY(0deg);
+            transform: translateZ(0px) rotateY(0deg);
+  }
+  25% {
+    -webkit-transform: translateZ(0px) rotateY(90deg);
+            transform: translateZ(0px) rotateY(90deg);
+  }
+  50% {
+    -webkit-transform: translateZ(0px) rotateY(180deg);
+            transform: translateZ(0px) rotateY(180deg);
+  }
+  75% {
+    -webkit-transform: translateZ(0px) rotateY(270deg);
+            transform: translateZ(0px) rotateY(270deg);
+  }
+  100% {
+    -webkit-transform: translateZ(0px) rotateY(360deg);
+            transform: translateZ(0px) rotateY(360deg);
+  }
+}
+
+@keyframes animateCube {
+  0% {
+    -webkit-transform: translateZ(0px) rotateY(0deg);
+            transform: translateZ(0px) rotateY(0deg);
+  }
+  25% {
+    -webkit-transform: translateZ(0px) rotateY(90deg);
+            transform: translateZ(0px) rotateY(90deg);
+  }
+  50% {
+    -webkit-transform: translateZ(0px) rotateY(180deg);
+            transform: translateZ(0px) rotateY(180deg);
+  }
+  75% {
+    -webkit-transform: translateZ(0px) rotateY(270deg);
+            transform: translateZ(0px) rotateY(270deg);
+  }
+  100% {
+    -webkit-transform: translateZ(0px) rotateY(360deg);
+            transform: translateZ(0px) rotateY(360deg);
+  }
+}
+/*# sourceMappingURL=index.css.map */

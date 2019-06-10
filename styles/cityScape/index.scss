@@ -121,7 +121,7 @@ html {
   $gridLine: 5px;
   width: 100vw;
   height: 100vh;
-  perspective: 200px;
+  perspective: calc(20vh + 4vw);
   
   #grid {
     
