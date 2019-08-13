@@ -1,0 +1,47 @@
+body {
+  background: #020225;
+}
+
+.thumbnail-wrapper {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.thumbnail-wrapper .thumbnail {
+  margin: 50px;
+  -webkit-perspective: inherit;
+          perspective: inherit;
+  -webkit-transform-style: inherit;
+          transform-style: inherit;
+}
+
+.thumbnail-wrapper .thumbnail img {
+  -webkit-transform: translateZ(-50px);
+          transform: translateZ(-50px);
+}
+
+.thumbnail-wrapper .thumbnail .text {
+  color: white;
+  font-size: 24px;
+  text-shadow: 3px 3px 0px black;
+  position: absolute;
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px);
+}
+
+.thumbnail-wrapper .thumbnail .title {
+  left: 10px;
+  top: 10px;
+  font-size: 32px;
+}
+
+.thumbnail-wrapper .thumbnail .description {
+  left: 10px;
+  bottom: 10px;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,37 @@
+body {
+  background: rgb(2, 2, 37);
+}
+
+.thumbnail-wrapper {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  display: flex;
+  
+  .thumbnail {
+    margin: 50px;
+    perspective: inherit;
+    transform-style: inherit;
+    img {
+      transform: translateZ(-50px);
+    }
+    
+    .text {
+      color: white;
+      font-size: 24px;
+      text-shadow: 3px 3px 0px black;
+      position: absolute;
+      transform: translateZ(50px);
+    }
+    
+    .title {
+      left: 10px;
+      top: 10px;
+      font-size: 32px;
+    }
+    
+    .description {
+      left: 10px;
+      bottom: 10px;
+    }
+  }
+}
