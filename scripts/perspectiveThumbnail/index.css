@@ -18,6 +18,9 @@ body {
           perspective: inherit;
   -webkit-transform-style: inherit;
           transform-style: inherit;
+  -webkit-transform-origin: initial initial initial;
+          transform-origin: initial initial initial;
+  cursor: pointer;
 }
 
 .thumbnail-wrapper .thumbnail img {

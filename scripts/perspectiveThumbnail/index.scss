@@ -11,6 +11,9 @@ body {
     margin: 50px;
     perspective: inherit;
     transform-style: inherit;
+    transform-origin: initial initial initial;
+    cursor: pointer;
+
     img {
       transform: translateZ(-50px);
     }
